@@ -1,7 +1,12 @@
-import * as path from "path";
+import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import { Configuration, WebpackOptionsNormalized } from "webpack";
 
-const configuration = {
+/**
+ * WebpackOptionsNormalized included to extend config type to include devServer
+ * SEE: https://github.com/webpack/webpack/issues/13621
+ * */
+const configuration: Configuration | WebpackOptionsNormalized = {
   entry: { bundle: path.join(path.resolve(), "src", "index.tsx") },
   target: "web",
   module: {
