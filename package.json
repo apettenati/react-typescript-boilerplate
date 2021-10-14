@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn webpack",
-    "lint": "yarn eslint",
+    "lint": "yarn eslint .",
     "start": "webpack serve --open"
   },
   "dependencies": {
