@@ -5,9 +5,9 @@
   "author": "Amanda Pettenati",
   "license": "MIT",
   "scripts": {
-    "build": "yarn webpack --mode development --config webpack.config.ts",
-    "lint": "yarn eslint --config .eslintrc.ts",
-    "start": "webpack serve --open --mode development"
+    "build": "yarn webpack",
+    "lint": "yarn eslint",
+    "start": "webpack serve --open"
   },
   "dependencies": {
     "react": "^17.0.2",
