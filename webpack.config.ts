@@ -7,7 +7,9 @@ import { Configuration, WebpackOptionsNormalized } from "webpack";
  * SEE: https://github.com/webpack/webpack/issues/13621
  * */
 const configuration: Configuration | WebpackOptionsNormalized = {
-  entry: { bundle: path.join(path.resolve(), "src", "index.tsx") },
+  entry: {
+    bundle: path.resolve(__dirname, "src", "index.tsx"),
+  },
   target: "web",
   module: {
     rules: [
@@ -28,12 +30,13 @@ const configuration: Configuration | WebpackOptionsNormalized = {
     extensions: [".tsx", ".ts", ".js"],
   },
   output: {
-    filename: "bundle.js",
-    path: path.resolve(path.resolve(), "./dist"),
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "dist"),
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(path.resolve(), "./public", "index.html"),
+      template: path.resolve(__dirname, "public", "index.html"),
+      clean: true,
     }),
   ],
 };
