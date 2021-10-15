@@ -9,14 +9,13 @@ import { Configuration, WebpackOptionsNormalized } from 'webpack'
 const configuration: Configuration | WebpackOptionsNormalized = {
   mode: 'development',
   entry: {
-    bundle: path.resolve(__dirname, 'src', 'index.tsx'),
+    index: path.resolve(__dirname, 'src', 'index.tsx'),
   },
   target: 'web',
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        // enforce: "pre", // why is this necessary?
         use: ['ts-loader'],
         exclude: /node_modules/,
       },
@@ -24,8 +23,9 @@ const configuration: Configuration | WebpackOptionsNormalized = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    static: '/./dist',
+    static: 'public',
     hot: true,
+    open: true,
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
@@ -36,7 +36,7 @@ const configuration: Configuration | WebpackOptionsNormalized = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public', 'index.html'),
+      template: path.resolve(__dirname, 'public'),
       clean: true,
     }),
   ],
