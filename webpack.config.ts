@@ -36,7 +36,7 @@ const configuration: Configuration | WebpackOptionsNormalized = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public'),
+      template: path.resolve(__dirname, 'public', 'index.html'),
       clean: true,
     }),
   ],
