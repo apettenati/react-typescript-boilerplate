@@ -8,7 +8,9 @@
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended"
     ],
-		"ignorePatterns": [ "**/dist/*.js"],
+    "ignorePatterns": [
+        "**/dist/*.js"
+    ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
@@ -23,18 +25,35 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "max-len": [ "warn", { "code": 80 } ],
-        "indent": [ "error", 2 ],
-        "linebreak-style": [ "error", "unix" ],
-        "quotes": [ "error", "single" ],
-        "semi": [ "error", "never" ],
-				"react-hooks/rules-of-hooks": "error",
-				"react-hooks/exhaustive-deps": "warn",
-				"react/react-in-jsx-scope": "off"
+        "max-len": [
+            "warn",
+            {
+                "code": 80
+            }
+        ],
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/react-in-jsx-scope": "off"
     },
-		"settings": {
-			"react": {
-				"version": "detect"
-			}
-		}
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
 }

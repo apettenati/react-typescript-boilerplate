@@ -2,7 +2,7 @@ import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { Configuration, WebpackOptionsNormalized } from 'webpack'
 
-/**
+/* *
  * WebpackOptionsNormalized included to extend config type to include devServer
  * SEE: https://github.com/webpack/webpack/issues/13621
  * */
