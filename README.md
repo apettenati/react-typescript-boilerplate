@@ -4,10 +4,10 @@ This is a front-end boilerplate made for TypeScript-React applications, intended
 
 This assumes no further stack decisions and is intentionally minimal.
 
-- Language: TypeScript
-- Front-End Framework: React
-- Linting: ESLint
-- Package Manager: Yarn
+- Language: [TypeSCript](https://github.com/microsoft/TypeScript)
+- Front-End Framework: [React](https://github.com/facebook/react/)
+- Linting: [ESLint](https://github.com/eslint/eslint)
+- Package Manager: [Yarn](https://github.com/yarnpkg/berry)
 
 Note there are no production scripts or webpack configuration.
 
@@ -28,11 +28,15 @@ To use this boilerplate:
 
 ### Linting 
 
-```yarn lint```
+```shell
+yarn lint
+```
 
 ### Build
 
-```yarn build```
+```shell
+yarn build
+```
 
 Files are bundled into a directory named `dist`
 This directory is excluded in the `.gitignore`
@@ -41,6 +45,8 @@ This directory is excluded in the `.gitignore`
 
 Start the development server with:
 
-```yarn start```
+```shell
+yarn start
+```
 
 The development server has live reloading and will refresh automatically on files saves.
